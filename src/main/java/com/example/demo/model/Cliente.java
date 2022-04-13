@@ -1,7 +1,14 @@
 package com.example.demo.model;
 
-public class Cliente {
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name="clientes")
+public class Cliente {
+	
+	@Id
 	private int id;
 	private String nombre;
 	private int telefono;
