@@ -22,9 +22,9 @@ CREATE TABLE `tienda`.`productos` (
   PRIMARY KEY (`nombre`),
   UNIQUE INDEX `nombre_UNIQUE` (`nombre` ASC) VISIBLE);
   
-INSERT INTO tienda.clientes
+INSERT INTO tienda.productos
 VALUES ('telefono', 299.99, 10);
 
-INSERT INTO tienda.clientes
+INSERT INTO tienda.productos
 VALUES ('laptop',899.99, 10);
 
