@@ -1,0 +1,34 @@
+version: '3.4' 
+services:
+  mysql_tienda:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: mysql_tienda
+    ports:
+      - '3306:3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: 'root'
+    networks:
+      tienda_network:
+        aliases:
+          - mysql_tienda
+    
+  rest_service_tienda:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: rest_service_tienda
+    ports:
+      - '1304:1304'
+    networks:
+      tienda_network:
+        aliases:
+          - rest_service_tienda
+    restart:
+      on-failure
+    
+networks:
+  tienda_network:
+  
+  
