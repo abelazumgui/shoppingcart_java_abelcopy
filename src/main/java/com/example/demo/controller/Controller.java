@@ -21,5 +21,9 @@ public class Controller {
 	public List<Cliente> listClientes() {
 		return clienteService.listado_clientes();
 	}
+	
+	public static void main(String[] args) {
+		System.out.print("Probando a ver que se ve");
+	}
 
 }
