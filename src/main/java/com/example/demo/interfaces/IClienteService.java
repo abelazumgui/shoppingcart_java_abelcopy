@@ -6,6 +6,12 @@ import com.example.demo.model.Cliente;
 
 
 public interface IClienteService {
-	public ArrayList<Cliente> listado_clientes();
+	
+	
+	public void alta(Cliente cliente);
+	public Cliente busqueda_id(int id);
+	public void modificar(Cliente cliente);
+	public void eliminar(int id_cliente);
+	public ArrayList<Cliente> listado();
 
 }
